@@ -47,6 +47,6 @@ CSS_FILE = "styles.css"
 
 # Hero section
 
-HEROTEXT = "Tailored Python Web Solutions Designed To Boost Efficiency & Revenue"
+HEROTEXT = "Tailored Python Web Solutions"
 HERO_CTA_BUTTON_TEXT  = "Tell us about your project"
 HEROSUBTEXT = ""
