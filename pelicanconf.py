@@ -35,10 +35,11 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 MENUITEMS = [
-    ("services", ""),
-    ("technologies", ""),
-    ("blog", ""),
-    ("contact", ""),
+    ("Home", ""),
+    ("About Us", ""),
+    ("Solutions", ""),
+    ("Our Work", ""),
+    ("Contact Us", ""),
     ]
 
 THEME = "buibui-theme"
@@ -47,6 +48,6 @@ CSS_FILE = "styles.css"
 
 # Hero section
 
-HEROTEXT = "Tailored Python Web Solutions"
+HEROTEXT = "Tailored digital solutions for your business"
 HERO_CTA_BUTTON_TEXT  = "Tell us about your project"
-HEROSUBTEXT = ""
+HEROSUBTEXT = "We elevate your business with creative end-to-end solutions that bring your vision to life."
