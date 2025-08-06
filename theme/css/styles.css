@@ -54,8 +54,8 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Nunito", serif;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: "Lalezar", serif;
+  --bs-font-monospace: SFMono-Regular, Menlo, "Lalezar, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -487,8 +487,9 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   font-weight: 300;
+  font-family: Noto Sans;
 }
 
 .display-1 {
