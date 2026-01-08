@@ -3,8 +3,21 @@
 * Copyright 2024 Buibui
 */
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
+// Throttle function for performance optimization
+function throttle(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Navbar scroll effect with throttling
+const handleScroll = throttle(function() {
     const navbar = document.getElementById('mainNav');
     if (navbar) {
         if (window.scrollY > 100) {
@@ -31,12 +44,15 @@ window.addEventListener('scroll', function() {
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === current) {
                 link.classList.add('active');
             }
         });
     }
-});
+}, 100);
+
+window.addEventListener('scroll', handleScroll);
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
