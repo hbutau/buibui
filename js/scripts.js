@@ -5,14 +5,13 @@
 
 // Throttle function for performance optimization
 function throttle(func, wait) {
-    let timeout;
+    let inThrottle;
     return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, wait);
+        }
     };
 }
 
