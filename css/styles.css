@@ -421,7 +421,7 @@ section {
 }
 
 .contact-section .form-control,
-.contact-section select.form-control {
+.contact-section .form-select {
     border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 1rem 1.5rem;
@@ -430,7 +430,7 @@ section {
 }
 
 .contact-section .form-control:focus,
-.contact-section select.form-control:focus {
+.contact-section .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1);
 }
@@ -570,22 +570,6 @@ section {
     .stat-number {
         font-size: 2rem;
     }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
 }
 
 /* Smooth Scroll */
