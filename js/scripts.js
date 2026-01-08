@@ -45,7 +45,7 @@ const handleScroll = throttle(function() {
         navLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
-            if (href && href.substring(1) === current) {
+            if (href && href.startsWith('#') && href.slice(1) === current) {
                 link.classList.add('active');
             }
         });
