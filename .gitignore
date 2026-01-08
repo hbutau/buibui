@@ -1,6 +1,7 @@
 # Backup files
 *.bak
 *-backup.*
+*~
 
 # OS files
 .DS_Store
@@ -15,3 +16,10 @@ Thumbs.db
 
 # Node modules (if added later)
 node_modules/
+
+# Pelican
+output/
+__pycache__/
+*.pyc
+.cache/
+*.pid
