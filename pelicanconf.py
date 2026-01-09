@@ -39,6 +39,7 @@ MENUITEMS = [
     ("About Us", "/#about"),
     ("Solutions", "/#services"),
     ("Our Work", "/#portfolio"),
+    ("Blog", "/archives.html"),
     ("Contact Us", "/#contact"),
     ]
 

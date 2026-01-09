@@ -2,23 +2,59 @@
 
 {% block title %}{{ article.title|striptags }} - {{ SITENAME|striptags }}{% endblock %}
 
+{% block body_class %}blog-details-page{% endblock %}
+
 {% block content %}
-<section class="section">
+<!-- Page Title -->
+<div class="page-title light-background">
   <div class="container">
-    <article>
-      <header>
-        <h1 class="entry-title">{{ article.title }}</h1>
-        <div class="post-meta">
-          <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-          {% if article.author %}
-          <span class="author">by {{ article.author }}</span>
-          {% endif %}
-        </div>
-      </header>
-      <div class="entry-content">
-        {{ article.content }}
+    <h1>{{ article.title }}</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="{{ SITEURL }}/">Home</a></li>
+        <li><a href="{{ SITEURL }}/archives.html">Blog</a></li>
+        <li class="current">{{ article.title }}</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+<!-- Blog Details Section -->
+<section id="blog-details" class="blog-details section">
+  <div class="container">
+    <article class="article" data-aos="fade-up" data-aos-delay="100">
+      <div class="post-img">
+        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
       </div>
+
+      <h2 class="title">{{ article.title }}</h2>
+
+      <div class="meta-top">
+        <ul>
+          <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ SITEURL }}/{{ article.author.url if article.author.url else '#' }}">{{ article.author }}</a></li>
+          <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ SITEURL }}/{{ article.url }}"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></a></li>
+          {% if article.category %}
+          <li class="d-flex align-items-center"><i class="bi bi-folder2"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
+          {% endif %}
+        </ul>
+      </div><!-- End meta top -->
+
+      <div class="content">
+        {{ article.content }}
+      </div><!-- End post content -->
+
+      <div class="meta-bottom">
+        {% if article.tags %}
+        <i class="bi bi-tags"></i>
+        <ul class="tags">
+          {% for tag in article.tags %}
+          <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div><!-- End meta bottom -->
+
     </article>
   </div>
-</section>
+</section><!-- /Blog Details Section -->
 {% endblock %}
