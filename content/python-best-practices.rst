@@ -88,8 +88,8 @@ List comprehensions are Pythonic but should be readable:
     even_squares = [x**2 for x in range(10) if x % 2 == 0]
     
     # Avoid: Too complex, use a regular loop instead
-    # complex_result = [x for x in items if condition1(x) 
-    #                   for y in x.children if condition2(y)]
+    complex_result = [x for x in items if condition1(x) 
+                      for y in x.children if condition2(y)]
 
 Handle Exceptions Properly
 ===========================
