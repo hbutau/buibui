@@ -1,16 +1,14 @@
 {% extends "base.html" %}
-
-{% block title %}{{ SITENAME|striptags }} - Tags{% endblock %}
-
+{% block title %}Tags - {{ SITENAME|striptags }}{% endblock %}
 {% block content %}
-
-    <section id="content" class="body">
-        <h1>Tags for {{ SITENAME }}</h1>
-        <ul>
-            {% for tag, articles in tags|sort %}
-                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-            {% endfor %}
-        </ul>
-    </section>
-
+<section class="section">
+  <div class="container">
+    <h1>Tags</h1>
+    <ul>
+    {% for tag, articles in tags %}
+      <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
 {% endblock %}
