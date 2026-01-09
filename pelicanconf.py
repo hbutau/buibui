@@ -35,11 +35,9 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 MENUITEMS = [
-    ("Home", ""),
-    ("About Us", ""),
-    ("Solutions", ""),
-    ("Our Work", ""),
-    ("Contact Us", ""),
+    ("Home", "#"),
+    ("Features", "#features"),
+    ("Contact", "#contact"),
     ]
 
 THEME = "buibui-theme"

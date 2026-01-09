@@ -113,3 +113,12 @@
 .buibui-bg-primary {
     background-color: #f9b433ff;
 }
+
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+}

@@ -1,45 +1,58 @@
               <!-- Contact section-->
-        <section class="contact-section bg-light py-5" id="contact">
+        <section class="bg-light py-5">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
-                    <h2 class="section-title mb-3">Get In Touch</h2>
-                    <p class="section-subtitle">Ready to start your project? Let's discuss how we can help you achieve your goals</p>
+                    <div class="feature buibui-bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h2 class="fw-bolder">Get in touch</h2>
+                    <p class="lead mb-0">We'd love to hear from you</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <form id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                            <!-- Hidden field for bot detection -->
-                            <div style="display: none;">
-                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    <div class="col-lg-6">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
-                            <input type="hidden" name="form-name" value="contact" />
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input class="form-control" type="text" name="name" placeholder="Your Name *" required />
-                                </div>
-                                <div class="col-md-6">
-                                    <input class="form-control" type="email" name="email" placeholder="Your Email *" required />
-                                </div>
-                                <div class="col-md-6">
-                                    <input class="form-control" type="tel" name="phone" placeholder="Phone Number" />
-                                </div>
-                                <div class="col-md-6">
-                                    <select class="form-select" name="service" required>
-                                        <option value="">Select Service *</option>
-                                        <option value="websites">Websites</option>
-                                        <option value="web-applications">Web Applications</option>
-                                        <option value="digital-marketing">Digital Marketing</option>
-                                        <option value="branding">Branding</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Tell us about your project *" required></textarea>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button class="btn btn-primary btn-lg px-5" type="submit">Send Message</button>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
