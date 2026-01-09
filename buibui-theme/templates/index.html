@@ -1,65 +1,339 @@
 {% extends "base.html" %}
-{% block content_title %}{% endblock %}
+
 {% block content %}
-    {% if articles %}
-        {% for article in articles_page.object_list %}
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
 
-        {# First item #}
-            {% if loop.first and not articles_page.has_previous() %}
-                <aside id="featured" class="body">
-                    <article>
-                        <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                        {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
-                    </article>
-                </aside><!-- /#featured -->
-                {% if loop.length > 1 %}
-                    <section id="content" class="body">
-                        <h1>Other articles</h1>
-                        <hr />
-                        <ol id="posts-list" class="hfeed">
-                {% endif %}
-        {# other items #}
-            {% else %}
-                {% if loop.first %}
-                    <section id="content" class="body">
-                        <ol id="posts-list" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
-                {% endif %}
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                               title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                    </header>
+  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/people-at-work.jpg" alt="" data-aos="fade-in">
 
-                    <div class="entry-content">
-                        {% include 'article_infos.html' %}
-                        {{ article.summary }}
-                        <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-                        {% include 'comments.html' %}
-                    </div><!-- /.entry-content -->
-                </article></li>
-            {% endif %}
-            {% if loop.last %}
-                {% if loop.length > 1 or articles_page.has_other_pages() %}
-                    </ol><!-- /#posts-list -->
-                    {% if articles_page.has_other_pages() %}
-                        {% include 'pagination.html' %}
-                    {% endif %}
-                    </section><!-- /#content -->
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        <section id="content" class="body">
-            {% if pages %}
-                <h2>Pages</h2>
-                <ul>
-                    {% for page in pages %}
-                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>This site currently has no content.</p>
-            {% endif %}
-        </section>
-    {% endif %}
-{% endblock content %}
+  <div class="container position-relative">
+
+    <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+      <h2>{{ HEROTEXT|default("Tailored digital solutions for your business") }}</h2>
+      <p>{{ HEROSUBTEXT|default("We elevate your business with creative end-to-end solutions that bring your vision to life.") }}</p>
+    </div><!-- End Welcome -->
+
+    <div class="content row gy-4">
+      <div class="col-lg-4 d-flex align-items-stretch">
+        <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+          <h3>Why Choose Buibui?</h3>
+          <p>
+            We are a team of experienced Python developers specializing in custom web applications, Django, and Flask development. 
+            Our expertise ensures high-quality, scalable solutions tailored to your business needs.
+          </p>
+          <div class="text-center">
+            <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Why Box -->
+
+      <div class="col-lg-8 d-flex align-items-stretch">
+        <div class="d-flex flex-column justify-content-center">
+          <div class="row gy-4">
+
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+                <i class="bi bi-code-slash"></i>
+                <h4>Custom Development</h4>
+                <p>Tailored Python and Django solutions built to match your exact requirements</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+                <i class="bi bi-lightning-charge"></i>
+                <h4>Fast & Efficient</h4>
+                <p>Modern technologies and agile practices ensure rapid development and deployment</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+                <i class="bi bi-shield-check"></i>
+                <h4>Secure & Scalable</h4>
+                <p>Enterprise-grade security and architecture that grows with your business</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+      </div>
+    </div><!-- End  Content-->
+
+  </div>
+
+</section><!-- /Hero Section -->
+
+<!-- About Section -->
+<section id="about" class="about section light-background">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/about.jpg" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-7 content" data-aos="fade-up" data-aos-delay="100">
+        <h3>About Buibui Software</h3>
+        <p>
+          We are a Harare-based software development company specializing in custom Python web applications. 
+          With years of experience in Django, Flask, and modern web technologies, we deliver solutions that 
+          transform businesses and streamline operations.
+        </p>
+        <ul>
+          <li>
+            <i class="bi bi-diagram-3"></i>
+            <div>
+              <h5>Expert Python Development</h5>
+              <p>Deep expertise in Python, Django, Flask, and modern web frameworks</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-fullscreen-exit"></i>
+            <div>
+              <h5>End-to-End Solutions</h5>
+              <p>From concept to deployment, we handle every aspect of your project</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-broadcast"></i>
+            <div>
+              <h5>Local & International Clients</h5>
+              <p>Serving businesses in Zimbabwe and around the world</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>Comprehensive web development solutions powered by Python</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-browser-chrome"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Web Applications</h3>
+          </a>
+          <p>Custom web applications built with Django and Flask, designed for performance and scalability</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-database"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Database Solutions</h3>
+          </a>
+          <p>Expert database design and optimization for PostgreSQL, MySQL, and MongoDB</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-cloud-arrow-up"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>API Development</h3>
+          </a>
+          <p>RESTful APIs and microservices with Django REST Framework and FastAPI</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-gear"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>System Integration</h3>
+          </a>
+          <p>Connect your systems and automate workflows with custom integrations</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-speedometer2"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Performance Optimization</h3>
+          </a>
+          <p>Speed up your existing applications with expert optimization techniques</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-headset"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Support & Maintenance</h3>
+          </a>
+          <p>Ongoing support and maintenance to keep your applications running smoothly</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Portfolio</h2>
+    <p>Some of our recent projects and success stories</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 1</h4>
+            <p>Django Web Application</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 2</h4>
+            <p>Custom API Solution</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Project 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 3</h4>
+            <p>E-commerce Platform</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Project 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>{{ HERO_CTA_BUTTON_TEXT|default("Tell us about your project") }}</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6">
+        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt"></i>
+          <h3>Address</h3>
+          <p>Harare, Zimbabwe</p>
+        </div>
+      </div><!-- End Info Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone"></i>
+          <h3>Call Us</h3>
+          <p>+263 77 123 4567</p>
+        </div>
+      </div><!-- End Info Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope"></i>
+          <h3>Email Us</h3>
+          <p>info@buibui.co.zw</p>
+        </div>
+      </div><!-- End Info Item -->
+
+    </div>
+
+    <div class="row gy-4 mt-1">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122089.02987302!2d31.02167!3d-17.8286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4ed20d06bf5%3A0x7ec52b2c5a8c2aaf!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2s!4v1234567890" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="col-lg-6">
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+{% endblock %}

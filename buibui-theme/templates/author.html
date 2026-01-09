@@ -1,2 +1,15 @@
-{% extends "index.html" %}
-{% block title %}{{ SITENAME|striptags }} - {{ author }}{% endblock %}
+{% extends "base.html" %}
+{% block title %}{{ author }} - {{ SITENAME|striptags }}{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1>Articles by {{ author }}</h1>
+    {% for article in articles %}
+      <article>
+        <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+        <p>{{ article.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
