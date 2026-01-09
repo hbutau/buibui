@@ -1,17 +1,50 @@
 {% extends "base.html" %}
 
-{% block title %}Archives - {{ SITENAME|striptags }}{% endblock %}
+{% block title %}Blog - {{ SITENAME|striptags }}{% endblock %}
+
+{% block body_class %}blog-page{% endblock %}
 
 {% block content %}
-<section class="section">
+<!-- Page Title -->
+<div class="page-title light-background">
   <div class="container">
-    <h1>Archives</h1>
-    <dl>
-      {% for article in dates %}
-        <dt>{{ article.locale_date }}</dt>
-        <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-      {% endfor %}
-    </dl>
+    <h1>Blog</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="{{ SITEURL }}/">Home</a></li>
+        <li class="current">Blog</li>
+      </ol>
+    </nav>
   </div>
-</section>
+</div><!-- End Page Title -->
+
+<!-- Blog Posts Section -->
+<section id="blog-posts" class="blog-posts section">
+  <div class="container">
+    <div class="row gy-4">
+      {% for article in dates %}
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <article>
+          <div class="post-img">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/blog/blog-{{ loop.index % 3 + 1 }}.jpg" alt="" class="img-fluid">
+          </div>
+          <p class="post-category">{{ article.category }}</p>
+          <h2 class="title">
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+          </h2>
+          <div class="d-flex align-items-center">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+            <div class="post-meta">
+              <p class="post-author">{{ article.author }}</p>
+              <p class="post-date">
+                <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+              </p>
+            </div>
+          </div>
+        </article>
+      </div><!-- End post list item -->
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- /Blog Posts Section -->
 {% endblock %}
