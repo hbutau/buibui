@@ -1,6 +1,6 @@
 [build]
-  command = "pip install pelican && pelican content -o output -s publishconf.py"
+  command = "pip install -r requirements.txt && pelican content -o output -s publishconf.py"
   publish = "output"
 
 [build.environment]
-  PYTHON_VERSION = "3.12"
+  PYTHON_VERSION = "3.11"
