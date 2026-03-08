@@ -1,5 +1,5 @@
 AUTHOR = 'Buibui Software'
-SITENAME = 'Buibui Software | Custom Python Web Development Services in Harare'
+SITENAME = 'Buibui Software | Websites & Web Applications for Businesses in Zimbabwe'
 SITEURL = ""
 
 PATH = "content"
@@ -49,6 +49,6 @@ CSS_FILE = "styles.css"
 
 # Hero section
 
-HEROTEXT = "Tailored digital solutions for your business"
+HEROTEXT = "We build affordable websites and web applications"
 HERO_CTA_BUTTON_TEXT  = "Tell us about your project"
-HEROSUBTEXT = "We elevate your business with creative end-to-end solutions that bring your vision to life."
+HEROSUBTEXT = "We help businesses and individuals in Zimbabwe — and around the world — get online with professional websites and web apps that work."
