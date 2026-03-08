@@ -7,7 +7,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
   <meta name="description" content="{% block description %}Buibui Software - Websites and Web Applications for Businesses in Zimbabwe{% endblock %}">
-  <meta name="keywords" content="{% block keywords %}website design, web applications, e-commerce, business websites, Zimbabwe, Harare{% endblock %}">
   <meta name="author" content="{{ AUTHOR }}">
 
   <!-- Favicons -->
@@ -28,6 +27,7 @@
 
   <!-- Main CSS File -->
   <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/flexor-main.css" rel="stylesheet">
+  <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/buibui-custom.css" rel="stylesheet">
 
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
@@ -53,7 +53,6 @@
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
@@ -63,7 +62,7 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="{{ SITEURL }}/" class="logo d-flex align-items-center">
-          <h1 class="sitename">Buibui Software</h1>
+          <h1 class="sitename">Buibui<span class="logo-dot">.</span></h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -71,6 +70,7 @@
             {% for title, link in MENUITEMS %}
             <li><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
+            <li class="nav-cta"><a href="/#contact">Book a Call <i class="bi bi-arrow-right"></i></a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -85,63 +85,10 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer id="footer" class="footer light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="{{ SITEURL }}/" class="logo d-flex align-items-center">
-            <span class="sitename">Buibui Software</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Harare, Zimbabwe</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+263777009885</span></p>
-            <p><strong>Email:</strong> <span>info@buibui.co.zw</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="{{ SITEURL }}/">Home</a></li>
-            <li><a href="{{ SITEURL }}/#about">About us</a></li>
-            <li><a href="{{ SITEURL }}/#services">Services</a></li>
-            <li><a href="{{ SITEURL }}/#portfolio">Portfolio</a></li>
-            <li><a href="{{ SITEURL }}/#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="{{ SITEURL }}/#services">New Website</a></li>
-            <li><a href="{{ SITEURL }}/#services">Website Redesign</a></li>
-            <li><a href="{{ SITEURL }}/#services">Online Store</a></li>
-            <li><a href="{{ SITEURL }}/#services">Care &amp; Maintenance</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>About Buibui</h4>
-          <p>We build affordable, high-quality websites and web applications for businesses and individuals in Zimbabwe and beyond.</p>
-        </div>
-
-      </div>
+  <footer id="footer" class="footer dark-background">
+    <div class="container text-center py-4">
+      <p class="mb-0">© 2026 Buibui Software · <a href="mailto:info@buibui.co.zw">info@buibui.co.zw</a> · +263777009885 · Harare, Zimbabwe</p>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Buibui Software</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Powered by <a href="https://getpelican.com/">Pelican</a>
-      </div>
-    </div>
-
   </footer>
 
   <!-- Scroll Top -->

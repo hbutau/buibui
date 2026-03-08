@@ -4,65 +4,368 @@
 <!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
 
-  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/people-at-work.jpg" alt="" data-aos="fade-in">
+  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
   <div class="container position-relative">
 
-    <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-      <h2>{{ HEROTEXT|default("Tailored digital solutions for your business") }}</h2>
-      <p>{{ HEROSUBTEXT|default("We elevate your business with creative end-to-end solutions that bring your vision to life.") }}</p>
-    </div><!-- End Welcome -->
+    <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
 
-    <div class="content row gy-4">
-      <div class="col-lg-4 d-flex align-items-stretch">
-        <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-          <h3>Why Choose Buibui?</h3>
-          <p>
-            We build affordable, high-quality websites and web applications for businesses and individuals. 
-            Whether you need a professional website or a custom web app, we deliver results that work for your business.
-          </p>
-          <div class="text-center">
-            <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+      <div class="hero-badge mb-3">
+        <span>✨ Now offering AI-powered solutions</span>
+      </div>
+
+      <h1>{{ HEROTEXT|default("We build websites &amp; intelligent web apps") }}</h1>
+      <p class="hero-sub">{{ HEROSUBTEXT|default("Helping businesses in Zimbabwe and around the world get online with professional websites, custom web apps, and AI-powered tools that drive real results.") }}</p>
+
+      <div class="hero-cta d-flex flex-wrap gap-3 mt-4">
+        <a href="#contact" class="btn-hero-primary">{{ HERO_CTA_BUTTON_TEXT|default("Get a Free Quote") }} <i class="bi bi-arrow-right"></i></a>
+        <a href="#portfolio" class="btn-hero-secondary">See Our Work</a>
+      </div>
+
+      <div class="hero-stats row gy-3 mt-5">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Projects Delivered</span>
           </div>
         </div>
-      </div><!-- End Why Box -->
-
-      <div class="col-lg-8 d-flex align-items-stretch">
-        <div class="d-flex flex-column justify-content-center">
-          <div class="row gy-4">
-
-            <div class="col-xl-4 d-flex align-items-stretch">
-              <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
-                <i class="bi bi-globe2"></i>
-                <h4>Websites That Work</h4>
-                <p>Professional websites designed to represent your business and attract customers</p>
-              </div>
-            </div><!-- End Icon Box -->
-
-            <div class="col-xl-4 d-flex align-items-stretch">
-              <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                <i class="bi bi-phone"></i>
-                <h4>Mobile-Friendly</h4>
-                <p>Every site we build looks great and works seamlessly on phones, tablets, and desktops</p>
-              </div>
-            </div><!-- End Icon Box -->
-
-            <div class="col-xl-4 d-flex align-items-stretch">
-              <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                <i class="bi bi-currency-dollar"></i>
-                <h4>Affordable Pricing</h4>
-                <p>Transparent, fair pricing so you know exactly what you get for your investment</p>
-              </div>
-            </div><!-- End Icon Box -->
-
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">AI</span>
+            <span class="stat-label">Ready Solutions</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">🌍</span>
+            <span class="stat-label">Global Clients</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">24h</span>
+            <span class="stat-label">Response Time</span>
           </div>
         </div>
       </div>
-    </div><!-- End  Content-->
+
+      <div class="tech-stack mt-4">
+        <span class="tech-label">Technologies We Work With</span>
+        <div class="tech-tags mt-2">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">WordPress</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Claude AI</span>
+          <span class="tech-tag">AWS</span>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
 </section><!-- /Hero Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>What We Offer</h2>
+    <p>Everything your business needs to thrive online</p>
+    <p class="section-subtitle">From simple landing pages to complex AI-integrated platforms — we build what your business actually needs.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-globe2"></i>
+          </div>
+          <a href="#contact" class="stretched-link">
+            <h3>Websites That Work</h3>
+          </a>
+          <p>Professional websites designed to represent your business, rank on Google, and convert visitors into customers.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-phone"></i>
+          </div>
+          <a href="#contact" class="stretched-link">
+            <h3>Mobile-Friendly Design</h3>
+          </a>
+          <p>Every site we build looks great and works seamlessly on phones, tablets, and desktops — no exceptions.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-robot"></i>
+          </div>
+          <a href="#ai" class="stretched-link">
+            <h3>AI-Powered Features</h3>
+          </a>
+          <p>Add intelligent chatbots, smart automation, recommendation engines, and AI assistants to your existing or new website.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <a href="#contact" class="stretched-link">
+            <h3>Custom Web Apps</h3>
+          </a>
+          <p>Beyond websites — we build custom tools, dashboards, and platforms tailored to your workflow and business needs.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-graph-up-arrow"></i>
+          </div>
+          <a href="#contact" class="stretched-link">
+            <h3>SEO &amp; Performance</h3>
+          </a>
+          <p>Fast, optimised websites that rank on Google and give your business the visibility it deserves.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <a href="#contact" class="stretched-link">
+            <h3>Maintenance &amp; Support</h3>
+          </a>
+          <p>We don't disappear after launch. Ongoing support, updates, and improvements as your business grows.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+<!-- AI Section -->
+<section id="ai" class="ai-section section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>AI &amp; Emerging Tech</h2>
+    <p>The future of business is intelligent</p>
+    <p class="section-subtitle">We integrate cutting-edge AI tools directly into your website or app — making your business smarter, faster, and more competitive.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="ai-feature-item d-flex gap-4">
+          <div class="ai-feature-icon">💬</div>
+          <div>
+            <h4>AI Chatbots &amp; Virtual Assistants</h4>
+            <p>24/7 customer support bots trained on your business data</p>
+          </div>
+        </div>
+      </div><!-- End AI Feature -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="ai-feature-item d-flex gap-4">
+          <div class="ai-feature-icon">🔄</div>
+          <div>
+            <h4>Business Process Automation</h4>
+            <p>Automate repetitive tasks, bookings, invoicing, and more</p>
+          </div>
+        </div>
+      </div><!-- End AI Feature -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="ai-feature-item d-flex gap-4">
+          <div class="ai-feature-icon">📊</div>
+          <div>
+            <h4>Smart Analytics &amp; Insights</h4>
+            <p>AI-powered dashboards that surface what actually matters</p>
+          </div>
+        </div>
+      </div><!-- End AI Feature -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="ai-feature-item d-flex gap-4">
+          <div class="ai-feature-icon">✍️</div>
+          <div>
+            <h4>AI Content Tools</h4>
+            <p>Generate product descriptions, blog posts, and marketing copy at scale</p>
+          </div>
+        </div>
+      </div><!-- End AI Feature -->
+
+    </div>
+
+    <!-- Use Cases -->
+    <div class="ai-usecases mt-5" data-aos="fade-up" data-aos-delay="100">
+      <h5 class="ai-usecases-title">🤖 AI Use Cases We've Delivered</h5>
+      <div class="use-case-tags mt-3">
+        <span class="use-case-tag">Customer Chatbots</span>
+        <span class="use-case-tag">Invoice Automation</span>
+        <span class="use-case-tag">Product Recommenders</span>
+        <span class="use-case-tag">Lead Qualification</span>
+        <span class="use-case-tag">Appointment Booking</span>
+        <span class="use-case-tag">AI Search</span>
+        <span class="use-case-tag">Email Automation</span>
+        <span class="use-case-tag">Document Processing</span>
+        <span class="use-case-tag">WhatsApp Bots</span>
+        <span class="use-case-tag">Data Dashboards</span>
+        <span class="use-case-tag">Content Generation</span>
+        <span class="use-case-tag">Image Recognition</span>
+      </div>
+    </div>
+
+    <!-- Pricing CTA -->
+    <div class="ai-pricing-box text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+      <p class="ai-pricing-label">Starting From</p>
+      <p class="ai-pricing-amount">$299 <span>/ project</span></p>
+      <a href="#contact" class="btn-hero-primary mt-3">Book a Free Consultation <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+</section><!-- /AI Section -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Portfolio</h2>
+    <p>Some of our recent projects and success stories</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 1</h4>
+            <p>Django Web Application</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 2</h4>
+            <p>Custom API Solution</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Project 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Project 3</h4>
+            <p>E-commerce Platform</p>
+            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Project 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Section -->
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-cards section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Client Feedback</h2>
+    <p>Businesses that trust Buibui</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="tcard">
+          <div class="tcard-quote">"</div>
+          <p>Buibui built our entire e-commerce platform from scratch. Professional, fast, and affordable. Our online sales have tripled.</p>
+          <div class="tcard-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="tcard-author d-flex align-items-center gap-3 mt-3">
+            <div class="tcard-avatar">TM</div>
+            <div>
+              <strong>Tendai Moyo</strong>
+              <p class="mb-0 text-muted small">Owner, ShopZim</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Testimonial -->
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="tcard">
+          <div class="tcard-quote">"</div>
+          <p>They added an AI chatbot to our site in under a week. Now our support team handles 60% fewer repetitive queries.</p>
+          <div class="tcard-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="tcard-author d-flex align-items-center gap-3 mt-3">
+            <div class="tcard-avatar">RC</div>
+            <div>
+              <strong>Rudo Chikwanda</strong>
+              <p class="mb-0 text-muted small">Marketing Director, FinServe ZW</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Testimonial -->
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="tcard">
+          <div class="tcard-quote">"</div>
+          <p>Affordable doesn't mean cheap with Buibui. World-class quality, genuinely great team to work with.</p>
+          <div class="tcard-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="tcard-author d-flex align-items-center gap-3 mt-3">
+            <div class="tcard-avatar">JN</div>
+            <div>
+              <strong>James Nkomo</strong>
+              <p class="mb-0 text-muted small">CEO, Harare Realty</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Testimonial -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
 
 <!-- About Section -->
 <section id="about" class="about section light-background">
@@ -113,261 +416,23 @@
 
 </section><!-- /About Section -->
 
-<!-- Services Section -->
-<section id="services" class="services section light-background">
+<!-- Final CTA Section -->
+<section id="contact" class="cta-section section dark-background">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <p>Affordable, quality websites and web applications for small businesses and individuals</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-globe2"></i>
-          </div>
-          <a href="#contact" class="stretched-link">
-            <h3>New Website</h3>
-          </a>
-          <p>We design and build your website from scratch — a well-crafted, affordable site that represents your business and is built to last</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-arrow-repeat"></i>
-          </div>
-          <a href="#contact" class="stretched-link">
-            <h3>Website Redesign</h3>
-          </a>
-          <p>Got an outdated site that isn't working for you? We'll refresh and modernise it so it looks great and performs better</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-cart-check"></i>
-          </div>
-          <a href="#contact" class="stretched-link">
-            <h3>Online Store</h3>
-          </a>
-          <p>Start selling online with a simple, secure e-commerce store that lets you manage your products and accept payments with ease</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-tools"></i>
-          </div>
-          <a href="#contact" class="stretched-link">
-            <h3>Care &amp; Maintenance</h3>
-          </a>
-          <p>We keep your website healthy — regular updates, backups, security monitoring, and fixes so you can focus on your business</p>
-        </div>
-      </div><!-- End Service Item -->
-
+  <div class="container text-center" data-aos="zoom-in" data-aos-delay="100">
+    <h2>Ready to take your business online?</h2>
+    <p>Get a free quote and consultation. No commitment, no jargon — just honest advice.</p>
+    <a href="https://wa.me/263777009885?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation" class="btn-hero-primary mt-3" target="_blank" rel="noopener noreferrer">
+      📅 Book a Free Call <i class="bi bi-arrow-right"></i>
+    </a>
+    <div class="cta-contact-info mt-4">
+      <a href="mailto:info@buibui.co.zw"><i class="bi bi-envelope me-1"></i> info@buibui.co.zw</a>
+      <span class="mx-3">·</span>
+      <a href="tel:+263777009885"><i class="bi bi-telephone me-1"></i> +263777009885</a>
     </div>
-
   </div>
 
-</section><!-- /Services Section -->
-
-<!-- How We Work Section -->
-<section id="how-we-work" class="section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>How We Work</h2>
-    <p>A transparent and collaborative process from concept to delivery</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item position-relative text-center">
-          <div class="icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <h3>1. Discover</h3>
-          <p>We listen to your requirements, analyze your business needs, and define clear project goals</p>
-        </div>
-      </div><!-- End Step -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item position-relative text-center">
-          <div class="icon">
-            <i class="bi bi-pencil-square"></i>
-          </div>
-          <h3>2. Design</h3>
-          <p>We create detailed architecture plans, wireframes, and technical specifications for your solution</p>
-        </div>
-      </div><!-- End Step -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item position-relative text-center">
-          <div class="icon">
-            <i class="bi bi-code-slash"></i>
-          </div>
-          <h3>3. Build</h3>
-          <p>Our experienced developers write clean, tested, and maintainable code using agile practices</p>
-        </div>
-      </div><!-- End Step -->
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item position-relative text-center">
-          <div class="icon">
-            <i class="bi bi-rocket-takeoff"></i>
-          </div>
-          <h3>4. Launch</h3>
-          <p>We deploy your solution, provide training, and offer ongoing support to ensure long-term success</p>
-        </div>
-      </div><!-- End Step -->
-
-    </div>
-
-  </div>
-
-</section><!-- /How We Work Section -->
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Our Portfolio</h2>
-    <p>Some of our recent projects and success stories</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Project 1</h4>
-            <p>Django Web Application</p>
-            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Project 2</h4>
-            <p>Custom API Solution</p>
-            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Project 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Project 3</h4>
-            <p>E-commerce Platform</p>
-            <a href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Project 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          </div>
-        </div><!-- End Portfolio Item -->
-
-      </div><!-- End Portfolio Container -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Portfolio Section -->
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>{{ HERO_CTA_BUTTON_TEXT|default("Tell us about your project") }}</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt"></i>
-          <h3>Address</h3>
-          <p>Harare, Zimbabwe</p>
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-telephone"></i>
-          <h3>Call Us</h3>
-          <p>+263777009885</p>
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-envelope"></i>
-          <h3>Email Us</h3>
-          <p>info@buibui.co.zw</p>
-        </div>
-      </div><!-- End Info Item -->
-
-    </div>
-
-    <div class="row gy-4 mt-1">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122089.02987302!2d31.02167!3d-17.8286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4ed20d06bf5%3A0x7ec52b2c5a8c2aaf!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2s!4v1234567890" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div><!-- End Google Maps -->
-
-      <div class="col-lg-6">
-        <form id="whatsapp-contact-form" class="whatsapp-contact-form" data-aos="fade-up" data-aos-delay="400">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" id="contact-name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" id="contact-email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" id="contact-subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" id="contact-message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="error-message"></div>
-              <div class="sent-message">Redirecting to WhatsApp...</div>
-
-              <button type="submit">Send via WhatsApp</button>
-            </div>
-
-          </div>
-        </form>
-      </div><!-- End Contact Form -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Contact Section -->
+</section><!-- /CTA Section -->
 
 {% endblock %}
+
