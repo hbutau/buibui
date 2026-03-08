@@ -1,5 +1,5 @@
 AUTHOR = 'Buibui Software'
-SITENAME = 'Buibui Software | Custom Python Web Development Services in Harare'
+SITENAME = 'Buibui Software | Websites &amp; Intelligent Web Apps for Businesses'
 SITEURL = ""
 
 PATH = "content"
@@ -36,11 +36,10 @@ DEFAULT_PAGINATION = 10
 
 MENUITEMS = [
     ("Home", "/"),
-    ("About Us", "/#about"),
-    ("Solutions", "/#services"),
-    ("Our Work", "/#portfolio"),
-    ("Blog", "/archives.html"),
-    ("Contact Us", "/#contact"),
+    ("Services", "/#services"),
+    ("AI Solutions", "/#ai"),
+    ("Portfolio", "/#portfolio"),
+    ("About", "/#about"),
     ]
 
 THEME = "buibui-theme"
@@ -49,6 +48,6 @@ CSS_FILE = "styles.css"
 
 # Hero section
 
-HEROTEXT = "Tailored digital solutions for your business"
-HERO_CTA_BUTTON_TEXT  = "Tell us about your project"
-HEROSUBTEXT = "We elevate your business with creative end-to-end solutions that bring your vision to life."
+HEROTEXT = "We build websites &amp; intelligent web apps"
+HERO_CTA_BUTTON_TEXT  = "Get a Free Quote"
+HEROSUBTEXT = "Helping businesses in Zimbabwe and around the world get online with professional websites, custom web apps, and AI-powered tools that drive real results."
