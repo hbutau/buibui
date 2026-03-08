@@ -1,0 +1,6 @@
+[build]
+  command = "pip install pelican && pelican content -o output -s publishconf.py"
+  publish = "output"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
