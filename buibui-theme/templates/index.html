@@ -114,87 +114,63 @@
 </section><!-- /About Section -->
 
 <!-- Services Section -->
-<section id="services" class="services section light-background">
+<section id="services" class="alt-services section light-background">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Our Services</h2>
-    <p>Comprehensive web development solutions powered by Python</p>
+    <p>End-to-end software solutions tailored to your business needs</p>
   </div><!-- End Section Title -->
 
   <div class="container">
 
     <div class="row gy-4">
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-browser-chrome"></i>
+          <div class="img">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/services-1.jpg" class="img-fluid" alt="Custom Web Development">
           </div>
-          <a href="#" class="stretched-link">
-            <h3>Web Applications</h3>
-          </a>
-          <p>Custom web applications built with Django and Flask, designed for performance and scalability</p>
+          <div class="details">
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications built with Django and Flask, designed for performance and scalability</p>
+          </div>
         </div>
       </div><!-- End Service Item -->
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
         <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-database"></i>
+          <div class="img">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/services-2.jpg" class="img-fluid" alt="API and Systems Integration">
           </div>
-          <a href="#" class="stretched-link">
-            <h3>Database Solutions</h3>
-          </a>
-          <p>Expert database design and optimization for PostgreSQL, MySQL, and MongoDB</p>
+          <div class="details">
+            <h3>API & Integrations</h3>
+            <p>RESTful APIs, microservices, and third-party integrations that connect your business systems seamlessly</p>
+          </div>
         </div>
       </div><!-- End Service Item -->
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
         <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-cloud-arrow-up"></i>
+          <div class="img">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/services-3.jpg" class="img-fluid" alt="Data Solutions">
           </div>
-          <a href="#" class="stretched-link">
-            <h3>API Development</h3>
-          </a>
-          <p>RESTful APIs and microservices with Django REST Framework and FastAPI</p>
+          <div class="details">
+            <h3>Data Solutions</h3>
+            <p>Expert database design, optimization, and data processing pipelines for PostgreSQL, MySQL, and MongoDB</p>
+          </div>
         </div>
       </div><!-- End Service Item -->
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-gear"></i>
+          <div class="img">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/assets/img/services-4.jpg" class="img-fluid" alt="Support and Maintenance">
           </div>
-          <a href="#" class="stretched-link">
-            <h3>System Integration</h3>
-          </a>
-          <p>Connect your systems and automate workflows with custom integrations</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-speedometer2"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Performance Optimization</h3>
-          </a>
-          <p>Speed up your existing applications with expert optimization techniques</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-headset"></i>
-          </div>
-          <a href="#" class="stretched-link">
+          <div class="details">
             <h3>Support & Maintenance</h3>
-          </a>
-          <p>Ongoing support and maintenance to keep your applications running smoothly</p>
+            <p>Ongoing support, performance optimization, and maintenance to keep your applications running at peak efficiency</p>
+          </div>
         </div>
       </div><!-- End Service Item -->
 
@@ -203,6 +179,65 @@
   </div>
 
 </section><!-- /Services Section -->
+
+<!-- How We Work Section -->
+<section id="how-we-work" class="section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>How We Work</h2>
+    <p>A transparent and collaborative process from concept to delivery</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative text-center">
+          <div class="icon">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h3>1. Discover</h3>
+          <p>We listen to your requirements, analyze your business needs, and define clear project goals</p>
+        </div>
+      </div><!-- End Step -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative text-center">
+          <div class="icon">
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <h3>2. Design</h3>
+          <p>We create detailed architecture plans, wireframes, and technical specifications for your solution</p>
+        </div>
+      </div><!-- End Step -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative text-center">
+          <div class="icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h3>3. Build</h3>
+          <p>Our experienced developers write clean, tested, and maintainable code using agile practices</p>
+        </div>
+      </div><!-- End Step -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative text-center">
+          <div class="icon">
+            <i class="bi bi-rocket-takeoff"></i>
+          </div>
+          <h3>4. Launch</h3>
+          <p>We deploy your solution, provide training, and offer ongoing support to ensure long-term success</p>
+        </div>
+      </div><!-- End Step -->
+
+    </div>
+
+  </div>
+
+</section><!-- /How We Work Section -->
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section">
